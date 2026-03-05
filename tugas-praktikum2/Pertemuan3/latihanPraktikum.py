@@ -42,3 +42,22 @@ m1 = Motor(2024, "ZX")
 print(m1.sound())
 print(c1.get_tahun_rilis())
 
+menu = [
+    ["Nasi Goreng",15000],
+    ["Mie Ayam",12000],
+    ["Ayam Goreng",18000],
+    ["Es Teh",5000],
+    ["Jus Jeruk",8000]
+]
+
+print("Menu Warung Barokah")
+for i in range(len(menu)):
+    print(i+1,".",menu[i][0],"Rp",menu[i][1])
+
+pilih = int(input("Pilih menu: "))
+
+if pilih >=1 and pilih <=5:
+    print("Menu:",menu[pilih-1][0])
+    print("Harga:",menu[pilih-1][1])
+else:
+    print("menu tidak ada")
