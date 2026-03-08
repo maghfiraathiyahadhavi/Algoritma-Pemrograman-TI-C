@@ -51,21 +51,3 @@ class Transaksi:
         print("Total bayar:",self.total)
 
 
-m1 = Menu("Nasi Goreng",15000)
-m2 = Menu("Mie Ayam",12000)
-m3 = Menu("Es Teh",5000)
-
-listmenu = [m1,m2,m3]
-
-for i in range(len(listmenu)):
-    print(i+1,end=" ")
-    listmenu[i].tampilkan()
-
-t = Transaksi()
-
-p = int(input("pilih menu: "))
-j = int(input("jumlah: "))
-
-t.tambah(listmenu[p-1],j)
-
-t.struk()

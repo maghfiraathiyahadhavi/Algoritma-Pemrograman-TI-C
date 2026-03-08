@@ -21,29 +21,3 @@ menu = [
     ["Jus Jeruk",8000]
 ]
 
-pesanan = []
-total = 0
-
-while True:
-    for i in range(len(menu)):
-        print(i+1,menu[i][0],menu[i][1])
-
-    pilih = int(input("pilih menu (0 selesai): "))
-
-    if pilih == 0:
-        break
-
-    jumlah = int(input("jumlah: "))
-
-    nama = menu[pilih-1][0]
-    harga = menu[pilih-1][1]
-
-    pesanan.append([nama,jumlah,harga])
-
-print("Pesanan kamu")
-for p in pesanan:
-    sub = p[1]*p[2]
-    total = total + sub
-    print(p[0],"x",p[1],"=",sub)
-
-print("Total:",total)
