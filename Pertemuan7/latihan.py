@@ -24,3 +24,22 @@ for i in range(n):
 print("Bubble Sort Result:")
 print(bubble_data)
 print("Jumlah swap:", bubble_swaps)
+
+selection_data = data.copy()
+n = len(selection_data)
+selection_swaps = 0
+
+for i in range(n):
+    max_index = i
+
+    for j in range(i+1, n):
+        if selection_data[j] > selection_data[max_index]:
+            max_index = j
+
+    if max_index != i:
+        selection_data[i], selection_data[max_index] = selection_data[max_index], selection_data[i]
+        selection_swaps += 1
+
+print("\nSelection Sort Result:")
+print(selection_data)
+print("Jumlah swap:", selection_swaps)
