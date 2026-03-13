@@ -6,3 +6,21 @@ data = [ 290, 1012, 731, 801, 992, 1395, 367, 519, 795, 1385, 274, 154, 219, 141
 486, 381, 1441, 312, 181, 785, 157, 793, 1029, 1273, 846, 1473, 57, 785, 588, 582, 920, 808, 644, 1182, 1101, 579, 623, 
 556, 858, 59, 163, 1236, 310, 1308, 962, 356, 1005, 883, 582, 786, 958, 321]
 
+bubble_data = data.copy()
+n = len(bubble_data)
+bubble_swaps = 0
+
+for i in range(n):
+    swapped = False
+    for j in range(0, n-i-1):
+        if bubble_data[j] > bubble_data[j+1]:
+            bubble_data[j], bubble_data[j+1] = bubble_data[j+1], bubble_data[j]
+            bubble_swaps += 1
+            swapped = True
+
+    if not swapped:
+        break
+
+print("Bubble Sort Result:")
+print(bubble_data)
+print("Jumlah swap:", bubble_swaps)

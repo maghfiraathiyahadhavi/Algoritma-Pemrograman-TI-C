@@ -19,23 +19,6 @@ else:
     print("book not found")
 
 
-bubble_data = data.copy()
-n = len(bubble_data)
-bubble_swaps = 0
 
-for i in range(n):
-    swapped = False
-    for j in range(0, n-i-1):
-        if bubble_data[j] > bubble_data[j+1]:
-            bubble_data[j], bubble_data[j+1] = bubble_data[j+1], bubble_data[j]
-            bubble_swaps += 1
-            swapped = True
-
-    if not swapped:
-        break
-
-print("Bubble Sort Result:")
-print(bubble_data)
-print("Jumlah swap:", bubble_swaps)
 
     
